@@ -87,7 +87,7 @@ function getApiUrl(): string {
 
   if (codespaceId) {
     // Running in GitHub Codespaces
-    const domain = process.env.GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN || 'github.dev';
+    const domain = process.env.GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN || 'app.github.dev';
     return `https://${codespaceId}-${codespacePort}.${domain}`;
   }
 
