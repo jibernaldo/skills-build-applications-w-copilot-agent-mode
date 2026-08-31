@@ -1,12 +1,12 @@
 import mongoose from 'mongoose';
 
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/octofit-tracker';
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/octofit_db';
 const db = mongoose.connection;
 
 mongoose
   .connect(MONGODB_URI)
   .then(() => {
-    console.log('Connected to MongoDB: octofit-tracker');
+    console.log('Connected to MongoDB: octofit_db');
   })
   .catch((error) => {
     console.error('Error connecting to MongoDB:', error);
